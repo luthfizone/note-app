@@ -71,3 +71,17 @@ button {
 .done-button:hover {
   background-color: #b82d3b;
 }
+
+/* footer */
+
+.footer {
+  margin-top: 2rem;
+  display: block;
+  color: white;
+  padding: 10px 0;
+  background-color: black;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  height: 5vh;
+  font-family: "Poppins", serif;
+}

@@ -36,6 +36,7 @@ function App() {
       <Header />
       <InputNotes addNote={addNote} />
       <NotesList notes={notes} removeNote={removeNote} />
+      <Footer />
     </div>
   );
 }
@@ -128,5 +129,9 @@ NotesList.propTypes = {
   notes: PropTypes.arrayOf(PropTypes.string).isRequired,
   removeNote: PropTypes.func.isRequired,
 };
+
+function Footer() {
+  return <span className="footer">Develop by luthfizone@2024</span>;
+}
 
 export default App;
