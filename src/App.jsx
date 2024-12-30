@@ -9,7 +9,7 @@ function App() {
 }
 
 function Header() {
-  return <h1>Notes</h1>;
+  return <h1 className="header">Notes</h1>;
 }
 
 function InputNotes() {
