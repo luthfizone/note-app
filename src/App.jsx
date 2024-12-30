@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -64,6 +65,10 @@ function InputNotes({ addNote }) {
   );
 }
 
+InputNotes.propTypes = {
+  addNote: PropTypes.func.isRequired,
+};
+
 function NotesList({ notes, removeNote }) {
   return (
     <ul className="notes-list">
@@ -78,5 +83,10 @@ function NotesList({ notes, removeNote }) {
     </ul>
   );
 }
+
+NotesList.propTypes = {
+  notes: PropTypes.arrayOf(PropTypes.string).isRequired,
+  removeNote: PropTypes.func.isRequired,
+};
 
 export default App;
