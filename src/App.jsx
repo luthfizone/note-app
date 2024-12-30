@@ -29,9 +29,9 @@ function InputNotes() {
 
 function NotesList() {
   return (
-    <ul>
-      <li>
-        Makan <button>Done</button>
+    <ul className="notes-list">
+      <li className="note-item">
+        Makan <button className="done-button">Done</button>
       </li>
     </ul>
   );

@@ -49,3 +49,25 @@ button {
 .add-button:hover {
   background-color: #218838;
 }
+
+/* notes list */
+.notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.done-button {
+  background-color: #dc3545;
+}
+
+.done-button:hover {
+  background-color: #b82d3b;
+}
