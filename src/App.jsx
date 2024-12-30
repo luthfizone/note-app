@@ -16,11 +16,18 @@ function App() {
     newNote.push(note);
     setNotes(newNote);
   };
+
+  const removeNote = (index) => {
+    const newNote = [...notes];
+    newNote.splice(index, 1);
+    setNotes(newNote);
+  };
+
   return (
     <div className="app">
       <Header />
       <InputNotes addNote={addNote} />
-      <NotesList notes={notes} />
+      <NotesList notes={notes} removeNote={removeNote} />
     </div>
   );
 }
@@ -57,12 +64,15 @@ function InputNotes({ addNote }) {
   );
 }
 
-function NotesList({ notes }) {
+function NotesList({ notes, removeNote }) {
   return (
     <ul className="notes-list">
       {notes.map((note, index) => (
         <li key={index} className="note-item">
-          {note} <button className="done-button">Done</button>
+          {note}{" "}
+          <button className="done-button" onClick={() => removeNote(index)}>
+            Done
+          </button>
         </li>
       ))}
     </ul>
