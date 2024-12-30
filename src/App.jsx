@@ -14,9 +14,15 @@ function Header() {
 
 function InputNotes() {
   return (
-    <form>
-      <input type="text" name="notes" id="notes" />
-      <button>Add</button>
+    <form className="input-form">
+      <input
+        type="text"
+        name="notes"
+        id="notes"
+        className="input-field"
+        placeholder="Add a new note..."
+      />
+      <button className="add-button">Add</button>
     </form>
   );
 }
